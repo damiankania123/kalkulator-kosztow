@@ -1,7 +1,7 @@
 const fuelCostInPln = 7
 const place = 'Rzeszow'
-const rentalPriceInPln = 200 //bazowa cena wypozyczenia
-const fuelConsumption = 6 // srednie spalanie na 100km
+const rentalPriceInPln = 200
+const fuelConsumption = 6
 const millisecunds = 86400000
 const year = new Date().getFullYear()
 const vatValue = 1.23
