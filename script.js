@@ -119,19 +119,11 @@ button.addEventListener('click', () => {
                 }
             }
         } else {
-            if (data.quantity < 3) {
-                const fuelCostSummary = (data.km / 100) * fuelConsumption * fuelCostInPln
-                data.price += fuelCostSummary
-                const netto = (data.result * rentalPriceInPln + data.price) * 1.15
-                const brutto = netto * vatValue
-                info.innerHTML = `cena brutto: ${brutto.toFixed(2)} a cena netto to ${netto.toFixed(2)} <br> Cena paliwa: ${fuelCostSummary}zł  Kwota Bazowa: ${rentalPriceInPln}zł`
-            } else {
-                const fuelCostSummary = (data.km / 100) * fuelConsumption * fuelCostInPln
-                data.price += fuelCostSummary
-                const netto = (data.result * rentalPriceInPln + data.price)
-                const brutto = netto * vatValue
-                info.innerHTML = `cena brutto: ${brutto.toFixed(2)} a cena netto to ${netto.toFixed(2)} <br> Cena paliwa: ${fuelCostSummary}zł  Kwota Bazowa: ${rentalPriceInPln}zł`
-            }
+            const fuelCostSummary = (data.km / 100) * fuelConsumption * fuelCostInPln
+            data.price += fuelCostSummary
+            const netto = (data.result * rentalPriceInPln + data.price)
+            const brutto = netto * vatValue
+            info.innerHTML = `cena brutto: ${brutto.toFixed(2)} a cena netto to ${netto.toFixed(2)} <br> Cena paliwa: ${fuelCostSummary}zł  Kwota Bazowa: ${rentalPriceInPln}zł`
         }
     }
 })
